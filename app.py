@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 from sklearn.preprocessing import MinMaxScaler
-import preprocessor, helper, personality_model
+import preprocessor, helper
+from models import User_prediction, summarizer, sentiment_analysis, personality_model, emotion_model
 from summarizer import clean_messages, detect_topics, get_topic_keywords
 from User_prediction import train_user_identification_model
 from sentiment_analysis import analyze_sentiment
