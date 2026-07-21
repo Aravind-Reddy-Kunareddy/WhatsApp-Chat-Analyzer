@@ -21,8 +21,12 @@ def preprocess(data):
         'User_message': messages
     })
     df['message_date'] = df['message_date'].str.rstrip(' -')
-    df['message_date'] = pd.to_datetime(df['message_date'],format="%d/%m/%y, %I:%M %p")
-    # df.rename(columns = {'message_date': 'dates'}, inplace = True)
+    df['message_date'] = pd.to_datetime(
+        df['message_date'],
+        format="mixed",
+        dayfirst=True,
+        errors="coerce"
+    )
     users = []
     messages = []
     period = []
