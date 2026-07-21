@@ -6,10 +6,10 @@ import plotly.graph_objects as go
 from sklearn.preprocessing import MinMaxScaler
 import preprocessor, helper
 from models import User_prediction, summarizer, sentiment_analysis, personality_model, emotion_model
-from summarizer import clean_messages, detect_topics, get_topic_keywords
-from User_prediction import train_user_identification_model
-from sentiment_analysis import analyze_sentiment
-from emotion_model import detect_emotion
+from models.summarizer import clean_messages, detect_topics, get_topic_keywords
+from models.User_prediction import train_user_identification_model
+from models.sentiment_analysis import analyze_sentiment
+from models.emotion_model import detect_emotion
 import seaborn as sns
 
 st.sidebar.title('Whatsapp Chat Analyzer')
