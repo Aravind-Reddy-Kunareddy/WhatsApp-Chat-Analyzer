@@ -3,10 +3,10 @@ pandas
 numpy
 matplotlib
 plotly
+seaborn
 wordcloud
 emoji
 scikit-learn
-joblib
 transformers
 torch
 sentencepiece
