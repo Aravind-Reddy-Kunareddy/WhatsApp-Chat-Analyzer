@@ -1,13 +1,13 @@
-Streamlit
-Pandas
-NumPy
-Matplotlib
-Seaborn (if used in analysis)
-WordCloud
-Emoji
-URLExtract
+streamlit
+pandas
+numpy
+matplotlib
+plotly
+wordcloud
+emoji
 scikit-learn
-NLTK
-Transformers (Sentiment & Emotion Detection)
-Torch
-SentencePiece (for some Hugging Face models)
+joblib
+transformers
+torch
+sentencepiece
+safetensors
