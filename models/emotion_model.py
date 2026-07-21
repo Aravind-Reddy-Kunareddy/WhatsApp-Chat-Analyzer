@@ -1,20 +1,21 @@
+import streamlit as st
 from transformers import pipeline
 
+@st.cache_resource
+def load_emotion_model():
+    return pipeline(
+        "text-classification",
+        model="tabularisai/multilingual-emotion-classification"
+    )
 
-emotion_classifier = pipeline(
-    "text-classification",
-    model="tabularisai/multilingual-emotion-classification"
-)
-
+emotion_classifier = load_emotion_model()
 
 def detect_emotion(message):
-
     result = emotion_classifier(
         message,
         truncation=True,
         max_length=512
     )
-
     return result
 
 if __name__ == "__main__":
